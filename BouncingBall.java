@@ -26,7 +26,7 @@ public class BouncingBall
     private int diameter;
     private int xPosition;
     private int yPosition;
-    private final int groundPosition;      // y position of ground
+    private final int groundPosition;// y position of ground
     private Canvas canvas;
     private int ySpeed = 1;                // initial downward speed
 
