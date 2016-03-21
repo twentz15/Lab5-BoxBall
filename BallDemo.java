@@ -21,7 +21,10 @@ public class BallDemo
     {
         myCanvas = new Canvas("Ball Demo", 600, 500);
     }
-    
+    /**
+     * The drawCanvas method draws the rectangle box that makes the the balls bounce around a select area
+     * the box acts as the boundry
+     */
     private void drawCanvas(Canvas canvas) 
     {  
         // get the height and width of the canvas  
@@ -34,6 +37,9 @@ public class BallDemo
         canvas.drawLine(BOUNDRY, BOUNDRY, BOUNDRY, height.intValue() - BOUNDRY);  
         canvas.drawLine(width.intValue() - BOUNDRY, BOUNDRY, width.intValue() - BOUNDRY, height.intValue() - BOUNDRY);  
     }  
+    /**
+     * Bounce makes the two balls and makes them "bounce" across the ground
+     */
     public void bounce()
     {
         int ground = 400;   // position of the ground line
@@ -63,10 +69,9 @@ public class BallDemo
     }
    
     /**  
-     * Draw a rectangle on the canvas and bounce balls inside of it  
+     * Draw a rectangle on the canvas and moves the balls inside of it  
      *  
      * @param numberOfBalls parameter used to determine number of balls  
-     * @param numberOfBounces parameter used to determine number of bounces  
      *  
      */  
     public void boxBounce(int numberOfBalls) 
@@ -81,20 +86,20 @@ public class BallDemo
         ArrayList<boxBall> balls = new ArrayList<>();  
         drawCanvas(myCanvas);  
    
-        // Add balls to an ArrayList based on numberOfBalls parameter  
+        //add balls to an arraylist based on numberOfBalls parameter  
         for (int i = 0; i <= deezBalls; i++) 
         {  
             balls.add(new boxBall(myCanvas, BOUNDRY));  
         }  
    
-        // Draw balls in ArrayList  
+        //draw balls from the arraylist 
         for (boxBall ball : balls) 
         {  
         ball.draw();  
         }  
    
           
-        while (x <= 50) 
+        while (x <= 100) //sets the timer for how long the balls are going to be moving
         {  
             myCanvas.wait(50); // small delay  
             for (boxBall ball : balls) 

@@ -22,7 +22,10 @@ public class boxBall
    
    
     /**
-     * Constructor for objects of class boxBall
+     * Constructor for the bounceing balls canvas that has more than two balls
+     * and asks for the number of balls as an Int
+     * @param Canvas takes the name of the canvas
+     * @param bounceBox asks the user how balls they want in the box
      */
     public boxBall(Canvas myCanvas, int bounceBox)
     {
@@ -55,6 +58,7 @@ public class boxBall
 
     /**
      * Move this ball according to its position and speed and redraw.
+     * Uses if statements to test wether or not the ball is hitting a wall or not
      **/
     public void move()
     {
