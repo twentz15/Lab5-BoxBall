@@ -4,8 +4,8 @@ import java.util.Random;
 /**
  * Write a description of class boxBall here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Tom Wentz
+ * @version 1.2 3/20/16
  */
 public class boxBall
 {
